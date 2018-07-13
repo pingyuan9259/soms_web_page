@@ -1,6 +1,6 @@
 # soms_web_page
 
-> 所使用的架构
+> 所使用的框架组合
 > vue2.0 + vue-router2.0 + vuex2 + axios
 
 ## 前端构建方式
