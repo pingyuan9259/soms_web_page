@@ -1,11 +1,7 @@
-# fe_mia_service
+# soms_web_page
 
 > 所使用的架构
 > vue2.0 + vue-router2.0 + vuex2 + axios
-
-* 全新的项目，全新的体验
-* 使用多入口VUE，按照**页面组**来划分vue入口
-* 遇到ESLint捣乱，别忘了查看.eslintrc.js
 
 ## 前端构建方式
 
@@ -34,4 +30,3 @@ npm run build --report
 | vue-router.js | v3.0 | 前端路由工具 |
 | vuex.js | v3.0 | 全局状态管理工具 |
 | axios.js | v0.17 | 基于Promise的HTTP客户端集成工具 |
-| mint-ui | v2.2 | 基于vue的组件库 |
