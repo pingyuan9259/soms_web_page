@@ -1,0 +1,30 @@
+// 标题样式
+._txt_l1 { font-size: 12px; line-height: 1.2; font-weight: normal; transform: scale(0.85); }
+._txt_l2 { font-size: 12px; line-height: 1.2; font-weight: normal; transform: scale(0.9); }
+._txt_l3 { font-size: 14px; line-height: 1.2; font-weight: normal; }
+._txt_l4 { font-size: 16px; line-height: 1.2; font-weight: normal; }
+._txt_l5 { font-size: 18px; line-height: 1.2; font-weight: normal; }
+._txt_l6 { font-size: 20px; line-height: 1.2; font-weight: normal; }
+._txt_l7 { font-size: 24px; line-height: 1.2; font-weight: normal; }
+
+// 正文样式
+._tit_page { border-bottom:1px #eeeeee solid; font-size:$font_size_l; padding-left:19px; height:47px;line-height: 47px; color:$color_black; }
+._txt_content { font-size: $font_size_m; color: $color_black; line-height: $font_size_m; font-weight: normal; }
+._txt_p1 { font-size: $font_size_m; color: $color_black; line-height: $font_size_m; font-weight: normal; }
+._txt_p2 { font-size: $font_size_s; color: $color_black; line-height: $font_size_s; font-weight: normal; }
+._txt_p3 { font-size: $font_size_s; color: $color_gray_txt; line-height: $font_size_s; font-weight: normal; }
+._txt_p4 { font-size: $font_size_xs; color: $color_gray_txt; line-height: $font_size_xs; font-weight: normal; }
+._txt_remark { font-size: $font_size_xs; color: $color_gray_txt; line-height: $font_size_xs; font-weight: normal; }
+._txt_big_num { font-size: $font_size_xxxl; color: $color_red_1; line-height: $font_size_xxxl; font-weight: bold; }
+
+// 超链接样式
+._txt_link { font-size: $font_size_m; color: $color_red_1; line-height: $font_size_m; font-weight: normal; }
+._txt_link:hover{ text-decoration: underline; }
+
+._list_link { @include fade(200); &:hover { color: $color_red_1; cursor: pointer; }}
+
+// 提示样式
+._txt_info { font-size: $font_size_m; color: $color_blue; line-height: $font_size_m; font-weight: normal; }
+
+// 备注级别正文样式
+._remark_info { font-size: $font_size_m; color: $color_gray_txt; line-height: $font_size_m; font-weight: normal; }

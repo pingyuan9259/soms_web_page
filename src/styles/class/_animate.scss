@@ -1,0 +1,29 @@
+// 选中与未选中
+._icon_radio { color: $color_gray_txt; font-size: 20px; }
+._icon_radio.active { color: red; }
+
+// 动效
+.rotate { 
+  position: absolute;
+  animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate { 
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+
+// Vue 过渡动效
+// 淡入淡出
+.fade-enter-active, .fade-leave-active { transition: opacity 0.1s ease-out; }
+.fade-enter, .fade-leave-to { opacity: 0; }
+.fade-slow-enter-active, .fade-slow-leave-active { transition: opacity 0.3s ease-out; }
+.fade-slow-enter, .fade-slow-leave-to { opacity: 0.2; }
+// 路由进入动效
+.slide-left-enter-active { transition: all .15s linear; opacity: 0; }
+.slide-left-leave-active { transition: all .15s linear; }
+.slide-left-enter, .slide-left-leave-to { transform: translateX(-50px); opacity: 0; }
+// 路由返回动效
+.slide-right-enter-active { transition: all .15s linear; opacity: 0; }
+.slide-right-leave-active { transition: all .15s linear; }
+.slide-right-enter, .slide-right-leave-to { transform: translateX(50px); opacity: 0; }

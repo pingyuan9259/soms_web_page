@@ -1,0 +1,108 @@
+/* 通用样式
+ * 作者：平原
+ * 创建：2017-11-23 */
+.icon {
+  width: 1em;
+  // 通过设置 font-size 来改变图标大小
+  height: 1em;
+  vertical-align: -0.15em;
+  // 图标和文字相邻时，垂直对齐
+  fill: currentColor;
+  // 通过设置 color 来改变 SVG 的颜色/fill
+  // overflow: hidden;
+  // path 和 stroke 溢出 viewBox 部分在 IE 下会显示，normalize.css 中也包含这行
+  overflow: visible !important;
+}
+
+// 去掉chrome自动填充淡黄色背景
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+// 去掉chrome的input的number的箭头
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+input, textarea {
+  @include fade(200);
+  outline: none;
+  border: none;
+  resize: none;
+  font-size: $font_size_m;
+  color: $color_black;
+
+  &:focus {
+    border-color: $color_red_1;
+  }
+
+}
+
+li {
+  list-style: none;
+}
+
+input::-webkit-input-placeholder {
+  //placeholder颜色
+
+  /* placeholder字体大小  */
+  font-size: $font_size_s;
+}
+
+body {
+  background: url('/static/images/page_bg.png');
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+
+  #container {
+    width: 100%;
+    height: 100%;
+
+    .wrap {
+      width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .wrap_content {
+      margin-left: 220px;
+      margin-bottom: 60px;
+    }
+  }
+
+  #user_entry {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+._txt_color {
+  //备案号字体颜色
+  color: $color_gray_txt;
+  font-size: $font_size_s;
+}
+
+// #245局部校验：
+.check_error, .params_error {
+  box-shadow: 0 0 7px -1px $color_red_1;
+  // border: 1px solid $color_red_1 !important;
+  box-sizing: border-box;
+  transition: all .2s linear;
+}
+
+// #245局部校验：
+.check_error_msg {
+  position: absolute;
+  bottom: -36px;
+  left: 0;
+  color: $color_red_1;
+  font-size: $font_size_xs;
+  transition: all .2s linear;
+  white-space: nowrap;
+}

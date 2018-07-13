@@ -1,0 +1,43 @@
+// 显示定位
+._relative { position: relative; }
+._block { display: block; }
+._inline_block { display: inline-block; }
+._hidden { display: none; }
+._overflow_hidden { overflow: hidden; }
+._nowrap { white-space: nowrap; }
+._border_box { box-sizing: border-box; }
+._clearfix { &:before, &:after { content: ""; display: table; } &:after { clear: both; overflow: hidden; }}
+._cursor_pointer { cursor: pointer; }
+._cursor_default { cursor: default; }
+
+// 弹性布局
+._flex { display: flex; }
+._flex_vertical_top { display: flex; align-items: flex-start; }
+._flex_vertical_center { display: flex; align-items: center; }
+._flex_horizontal_center { display: flex; justify-content: center; }
+._flex_horizontal_left { display: flex; justify-content: flex-start; }
+._flex_horizontal_right { display: flex; justify-content: flex-end; }
+._flex_space_between { display: flex; justify-content: space-between; }
+
+// 浮动
+._pull_left { float: left; }
+._pull_right { float: right; }
+
+// 文字排布
+._txt_center { text-align: center; }
+._txt_right{ text-align: right; }
+._txt_left { text-align: left; }
+
+// 边框
+._border { border: 1px solid $color_bg; }
+._border_dashed { border: 1px dashed $color_gray_3; }
+._border_bottom { border-bottom: 1px solid $color_bg; }
+._border_left { border-left: 1px solid $color_bg; }
+._border_right { border-right: 1px solid $color_bg; }
+._border_top { border-top: 1px solid $color_bg; }
+._border_bottom_dashed { border-bottom: 1px dashed $color_bg; }
+._border_radius3 { border-radius: 3px; }
+._border_radius4 { border-radius: 4px; }
+
+//超出一省略
+._ellipsis {overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}

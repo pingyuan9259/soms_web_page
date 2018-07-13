@@ -1,0 +1,69 @@
+@import '../../../styles/enhance.scss';
+
+#detals_quality_module {
+  background-color: #fff;
+  padding: rem(25);
+
+  .result .result_type,
+  .score .score_type,
+  .info .info_textarea {
+    margin-left: rem(135);
+  }
+
+  .result {
+
+    .result_type a {
+      margin: 0 rem(10);
+      margin-bottom: rem(10);
+    }
+  }
+
+  .score {
+    margin-bottom: rem(30);
+
+    a {
+      display: inline-block;
+      width: 100%;
+
+      p {
+        display: inline-block;
+        margin-left: rem(20);
+      }
+
+      input {
+        @include border($color_gray_2);
+        border: none;
+        width: rem(140);
+        height: rem(50);
+        border-radius: rem(25);
+        line-height: rem(50);
+        padding: 0 rem(20);
+      }
+    }
+  }
+
+  .info {
+    margin-bottom: rem(20);
+
+    textarea {
+      display: block;
+      box-sizing: border-box;
+      border-radius: rem(8);
+      padding: rem(15) rem(20);
+      outline: none;
+      border: none;
+      resize: none;
+      width: 100%;
+      height: rem(180);
+      font-size: $font_size_s;
+      color: $color_black;
+      line-height: rem(45);
+      background-color: $color_gray_0;
+    }
+
+    .submit {
+      margin-top: rem(30);
+      width: rem(200);
+    }
+  }
+}

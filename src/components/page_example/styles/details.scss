@@ -1,0 +1,63 @@
+@import '../../../styles/enhance.scss';
+
+#details_module {
+  // padding-bottom: rem(140);
+
+  .line {
+    @include border($color_gray_2, bottom);
+    display: block;
+    height: 1px;
+    margin-top: -1px;
+    margin-left: rem(25);
+  }
+
+  .details_info {
+    background-color: #fff;
+    margin-top: rem(20);
+    padding: rem(25);
+
+    .item_header,
+    .item_footer {
+      @include clearfix;
+
+      span {
+        display: inline-block;
+        height: rem(50);
+        line-height: rem(45);
+        font-size: $font_size_s;
+        color: $color_black;
+      }
+
+    }
+
+    .item_content {
+      p {
+        font-size: $font_size_s;
+        color: $color_black;
+        margin-bottom: rem(10);
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .item_footer { margin-top: rem(8); }
+  }
+
+  .option {
+    padding-top: rem(80);
+    padding-bottom: rem(140);
+    text-align: center;
+    background-color: #fff;
+
+    .can_cancel {
+      margin-right: rem(30);
+    }
+  }
+
+  .blank {
+    height: rem(100);
+    background-color: #fff;
+  }
+}

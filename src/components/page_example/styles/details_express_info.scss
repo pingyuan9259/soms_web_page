@@ -1,0 +1,37 @@
+@import '../../../styles/enhance.scss';
+
+#details_express_info_module {
+  background-color: #fff;
+  padding: rem(25);
+
+  .editorInfo {
+    p {
+      display: flex;
+    }
+
+    .express {
+      display: flex;
+      align-items: center;
+
+      .btn_label { margin: 0 rem(10); padding: 0; }
+    }
+
+
+    input {
+      @include border($color_gray_2);
+      width: rem(320);
+      height: rem(54);
+      border-radius: rem(8);
+      line-height: rem(54);
+      padding: 0 rem(20);
+    }
+  }
+
+  .option {
+    margin-top: rem(20); 
+
+    a {
+      margin-right: rem(20);
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../../styles/enhance.scss';
+
+#aftersale_list_module {
+  min-height: 50vh;
+
+  .list_item {
+    background-color: #fff;
+    margin-top: rem(20);
+    padding: rem(25);
+
+    .item_header {
+      @include clearfix;
+
+      span {
+        display: inline-block;
+        height: rem(50);
+        line-height: rem(45);
+        font-size: $font_size_s;
+        color: $color_black;
+      }
+
+    }
+
+    .item_content {
+      p {
+        font-size: $font_size_s;
+        color: $color_black;
+        margin-bottom: rem(10);
+      }
+
+      p:last-child { margin-bottom: 0; }
+      .active { color: $color_pink; }
+    }
+  }
+
+  .list_loading {
+    width: 100%;
+    text-align: center;
+    font-size: $font_size_s;
+    padding-top: rem(35);
+    padding-bottom: rem(120);
+    color: $color_gray_3;
+
+    span {
+      display: flex;
+      justify-content: center;
+      margin-top: rem(25);
+      margin-bottom: rem(-80);
+      opacity: 0.6;
+    }
+  }
+}

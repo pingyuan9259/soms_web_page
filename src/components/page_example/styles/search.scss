@@ -1,0 +1,99 @@
+@import '../../../styles/enhance.scss';
+
+#search_module {
+
+  .open_search {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 50;
+    height: rem(95);
+    width: rem(95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+
+    .icon {
+      font-size: rem(32);
+      color: $color_black;
+    }
+  }
+
+  .search_container {
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .open {
+    position: static;
+    background-color: transparent;
+    margin-top: rem(-550);
+    height: auto;
+
+    .search_dict {
+      opacity: 0;
+    }
+  }
+
+  .search_dict {
+    padding: rem(25);
+
+    label {
+      display: inline-block;
+      font-size: $font_size_s;
+      line-height: rem(26);
+      color: $color_black;
+      margin-top: rem(20);
+    }
+
+    .input {
+      text-align: left;
+      padding: rem(12) 0;
+
+
+      i {
+        @include border($color_gray_2, bottom);
+        position: relative;
+        top: rem(-4);
+        display: inline-block;
+        width: rem(35);
+        height: rem(2);
+        margin: 0 rem(20);
+      }
+
+      input {
+        @include border($color_gray_2);
+        display: inline-block;
+        font-size: $font_size_s;
+        color: $color_black;
+        border-radius: rem(8);
+        line-height: rem(50);
+        height: rem(50);
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0 rem(10);
+      }
+
+      input {
+        width: 42%;
+      }
+    }
+
+    .clear {
+      margin-bottom: rem(5);
+    }
+  }
+
+  .search_btn {
+    position: relative;
+    padding-top: rem(50);
+    padding-bottom: rem(50);
+    text-align: center;
+    box-shadow: 0 rem(80) rem(100) 0 #fff;
+  }
+
+  .active {
+    background: $color_pink;
+  }
+}

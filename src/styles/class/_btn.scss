@@ -1,0 +1,152 @@
+// 禁用
+._disabled { transition: all .2s ease-out; opacity: 0.6;}
+
+// 初始化按钮样式
+@mixin initBtn($size: m) {
+  @include fade(200);
+  display: inline-block;
+  background-color: $color_red_1;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @if ($size == m) {
+    font-size: $font_size_m; height: 36px; line-height: 36px; width: 100px;
+  }
+
+  @if ($size == s) {
+    font-size: $font_size_m; height: 36px; line-height: 36px; padding: 0 12px;
+  }
+
+  &:hover {
+    background-color: $color_red_2;
+  }
+}
+
+@mixin disabledBtn() {
+  background-color: $color_gray_btn;
+  cursor: default;
+}
+
+._btn_l { @include initBtn(l); }
+._btn_m { @include initBtn(m); }
+._btn_s { @include initBtn(s); }
+._btn_xs { @include initBtn(xs); }
+._btn_l[btnDisabled=true],
+._btn_m[btnDisabled=true],
+._btn_s[btnDisabled=true],
+._btn_xs[btnDisabled=true] { @include disabledBtn; }
+
+// 初始化空心按钮
+@mixin initBtnHollow($size: m) {
+  @include fade(200);
+  display: inline-block;
+  border: 1px solid $color_red_1;
+  border-radius: 4px;
+  background-color: #fff;
+  color: $color_red_1;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  /* position: relative; top: 1px; */
+
+  @if ($size == m) {
+    font-size: $font_size_m; height: 36px; line-height: 36px; width: 100px;
+  }
+
+  @if ($size == s) {
+    font-size: $font_size_m; height: 36px; line-height: 36px; padding: 0 12px;
+  }
+
+  @if ($size == xs) {
+    width: rem(150); height: rem(50);
+    & > span {
+      font-size: rem(52); line-height: rem(100);
+      height: rem(100); min-width: rem(300);
+    }
+  }
+
+  &:hover {
+    background-color: #f6f6f6;
+  }
+}
+
+@mixin disabledBtnHollow() {
+  @include border($color_gray_txt)
+  color: $color_black;
+  cursor: default;
+}
+
+._btn_hollow_m { @include initBtnHollow(m); }
+._btn_hollow_s { @include initBtnHollow(s); }
+._btn_hollow_xs { @include initBtnHollow(xs); }
+._btn_hollow_s[btnDisabled=true],
+._btn_hollow_xs[btnDisabled=true] { @include disabledBtnHollow; }
+
+// 标签按钮
+@mixin initBtnLabel($size: m, $color: $color_red_1) {
+  @include fade(200);
+  display: inline-block;
+  cursor: pointer;
+  color: $color;
+
+  @if ($size == s) { font-size: $font_size_xs; line-height: $font_size_xs; }
+  @if ($size == m) { font-size: $font_size_m; line-height: $font_size_m; }
+}
+
+@mixin disabledBtnLabel() {
+  color: $color_gray_btn;
+  cursor: default;
+}
+
+._btn_label { @include initBtnLabel; }
+._btn_label_blue { @include initBtnLabel; }
+._btn_label_s { @include initBtnLabel(s); }
+._btn_label_s_blue { @include initBtnLabel(s, $color_blue); }
+._btn_label[btnDisabled=true] { @include disabledBtnLabel; }
+
+// 输入框
+@mixin initInput($size:s) {
+  border: 1px solid $color_gray_btn;
+  padding: 0 10px;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  font-size: $font_size_m;
+
+  @if ($size == s) {
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+  } @else if ($size == l) {
+    width: 400px;
+    height: 42px;
+    line-height: 40px;
+  }
+}
+
+._input_s { @include initInput(s); }
+._input_l { @include initInput(l); }
+
+
+// 文本输入
+@mixin initTextarea($size:m) {
+  border: 1px solid $color_gray_btn;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: $font_size_m;
+
+  @if ($size == m) {
+    width: 220px;
+    height: 100px;
+    line-height: 40px;
+  } @else if ($size == l) {
+    width: 400px;
+    height: 100px;
+    line-height: 25px;
+  }
+}
+
+._textarea_m { @include initTextarea(m); }
+._textarea_l { @include initTextarea(l); }

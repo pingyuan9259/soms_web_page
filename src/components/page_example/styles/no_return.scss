@@ -1,0 +1,82 @@
+@import '../../../styles/enhance.scss';
+
+#no_return_module {
+  padding: rem(25);
+
+  .text_cont {
+    position: relative;
+    margin: rem(30) 0;
+    border-radius: rem(6);
+    padding: rem(15) rem(20);
+    background-color: #fff;
+
+    .block {
+      position: absolute;
+      top: rem(-10);
+      left: rem(60);
+      display: block;
+      height: rem(20);
+      width: rem(20);
+      background-color: #fff;
+      transform: rotate(45deg);
+    }
+
+    textarea {
+      outline: none;
+      border: none;
+      resize: none;
+      width: 100%;
+      font-size: $font_size_s;
+      color: $color_black;
+      line-height: rem(45);
+    }
+  }
+
+  .coupon {
+    margin-top: rem(40);
+
+    .coupon_suply {
+      display: inline-block;
+      margin-bottom: rem(20);
+    }
+
+    .coupon_reason {
+      display: flex;
+      align-items: center;
+      margin-left: rem(20);
+
+      a { margin: 0 rem(10); padding: 0; }
+    }
+
+    .coupon_money {
+      margin-left: rem(20);
+
+      .sub_title {
+        position: relative;
+
+        label {
+          position: absolute;
+          top: rem(50);
+          left: 0;
+        }
+      }
+
+      .sub_content {
+        margin-left: rem(130);
+      }
+
+      a {
+        margin: 0 rem(10);
+        margin-bottom: rem(10);
+      }
+    }
+  }
+
+
+
+  .submit {
+    margin-top: rem(70);
+    text-align: center;
+  }
+
+}
